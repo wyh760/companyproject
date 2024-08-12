@@ -1,0 +1,29 @@
+<template>
+    <div>
+      <p v-if="isVisible">이 문장은 보입니다!</p>
+      <p v-if="!isVisible">이 문장은 보이지 않습니다.</p>
+      <button @click="toggleVisibility">토글</button>
+    </div>
+    <nav>      
+      leader is in charge
+    </nav>
+    <main>      
+    </main>
+    <footer></footer>
+  </template>
+  
+  <script>
+  export default {
+    data() {
+      return {
+        isVisible: true
+      };
+    },
+    methods: {
+      toggleVisibility() {
+        this.isVisible = !this.isVisible;
+      }
+    }
+  };
+  </script>
+  
